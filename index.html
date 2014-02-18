@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Stylus</title>
+		<script type="text/javascript" src="http://www.sodimac.com.pe/static/script/common/jquery-1.7.2.min.js"></script>
+		
+		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
+		
+		<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.cookie/1.3/jquery.cookie.js"></script>
+	</head>
+
+	<body>
+		<div id="el-iframe" style="background:#FF00FF; padding:50px; border-radius:50%; display:none;">
+			<form id="pelotas">
+			<input id="bolas" type="text" required />
+			<input id="cuadradas" type="text" required />
+			<input id="eviar" type="submit" value="asdas"/>
+			</form>
+		</div>
+		
+		
+		<script type="text/javascript">
+			(function() {
+				var mycookie = $.cookie("bolas");
+			    if (!(mycookie && mycookie == "true")) {
+			    	$("#el-iframe").css("display","inline-block")
+			    }
+			})();
+			$("form").submit( function(event) {
+				event.preventDefault();
+				alert("sadas");
+				$("#formulario-abajo").submit();
+			    $.cookie("bolas", "true"), {
+			        path: '/',
+			        expires: 365
+			    };
+			    $("#el-iframe").slideUp(); 
+			});
+			/*var iframe = "<iframe src='iframe.html'></iframe>";
+
+			var bolas = jQuery.parseJSON( '{ "name": "John" }' );
+
+			if(bolas == "true") {
+				$("body").html(iframe);
+			}*/
+ 			
+ 			$("#bolas").keyup( function() {
+ 				$("#cuadradas").val($("#bolas").val());
+ 				
+ 			});
+
+		</script>
+		
+	</body>
+</html>

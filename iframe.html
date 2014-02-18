@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>asdasdasd</title>
+		<script type="text/javascript" src="http://www.sodimac.com.pe/static/script/common/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.cookie/1.3/jquery.cookie.js"></script>
+	</head>
+	<body>
+		<button id='asd'>ocultar ete<button>
+		<script type="text/javascript">
+			(function() {
+				var mycookie = $.cookie("bolas");
+			    if (mycookie && mycookie == "true") {
+			       
+			    }
+			})();
+
+			$("#asd").on("click", function() {
+			    $.cookie("bolas", "true"), {
+			        path: '/',
+			        expires: 365
+			    };
+			    alert("sdas");
+			});
+		</script>
+	</body>
+</html>
